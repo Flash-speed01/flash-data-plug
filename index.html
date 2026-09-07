@@ -1,0 +1,79 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MDP BundleHub - Enterprise Admin</title>
+    <meta name="description" content="Manage your data bundle business, pricing, and user analytics with MDP BundleHub.">
+
+    <script src="https://resource.trickle.so/vendor_lib/unpkg/react@18/umd/react.production.min.js"></script>
+    <script src="https://resource.trickle.so/vendor_lib/unpkg/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://resource.trickle.so/vendor_lib/unpkg/@babel/standalone/babel.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://resource.trickle.so/vendor_lib/unpkg/lucide-static@0.516.0/font/lucide.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.9/dist/chart.umd.min.js"></script>
+
+    <style type="text/tailwindcss">
+        @layer theme {
+        :root {
+            --primary-color: #0f172a;
+            --secondary-color: #3b82f6;
+            --accent-color: #10b981;
+            --bg-main: #f8fafc;
+            --card-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+        }
+    }
+
+    @layer base {
+        body {
+            @apply bg-[var(--bg-main)] text-[var(--primary-color)] antialiased;
+        }
+    }
+
+    @layer components {
+        .card {
+            @apply bg-white rounded-xl shadow-[var(--card-shadow)] p-6 border border-gray-100;
+        }
+        .sidebar-link {
+            @apply flex items-center px-4 py-3 text-gray-600 rounded-lg transition-all duration-200 hover:bg-blue-50 hover:text-blue-600;
+        }
+        .sidebar-link.active {
+            @apply bg-blue-50 text-blue-600 font-medium border-l-4 border-blue-600 rounded-l-none;
+        }
+        .btn-primary {
+            @apply px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors flex items-center gap-2 font-medium;
+        }
+        .bundle-card {
+            @apply border border-slate-200 rounded-xl p-4 bg-white hover:border-blue-300 hover:shadow-md transition-all;
+        }
+    }
+    </style>
+    <script>
+        const ChartJS = window.Chart;
+    </script>
+    <meta property="og:title" content="MDP BundleHub - Enterprise Admin">
+    <meta property="og:description" content="Manage your data bundle business, pricing, and user analytics with MDP BundleHub.">
+    <meta property="og:image" content="https://app.trickle.so/storage/public/images/usr_20ebaa6c08000001/78e8d245-1d14-4b64-871e-6503c06b57e9.png">
+    <meta name="twitter:title" content="MDP BundleHub - Enterprise Admin">
+    <meta name="twitter:description" content="Manage your data bundle business, pricing, and user analytics with MDP BundleHub.">
+    <meta name="twitter:image" content="https://app.trickle.so/storage/public/images/usr_20ebaa6c08000001/78e8d245-1d14-4b64-871e-6503c06b57e9.png">
+</head>
+
+<body>
+    <div id="root"></div>
+    <script type="text/babel" src="utils/api.js"></script>
+    <script type="text/babel" src="components/Sidebar.js"></script>
+    <script type="text/babel" src="components/StatCard.js"></script>
+    <script type="text/babel" src="components/DashboardChart.js"></script>
+    <script type="text/babel" src="components/DataTable.js"></script>
+    <script type="text/babel" src="components/BundlePriceList.js"></script>
+    <script type="text/babel" src="components/UserManagement.js"></script>
+    <script type="text/babel" src="components/Settings.js"></script>
+    <script type="text/babel" src="components/AnalyticsView.js"></script>
+    <script type="text/babel" src="components/HelpCenter.js"></script>
+    <script type="text/babel" src="components/Security.js"></script>
+    <script type="text/babel" src="app.js"></script>
+
+</body>
+
+</html>
